@@ -12,6 +12,8 @@ class Task1 extends StatefulWidget {
 }
 
 class _Task1State extends State<Task1> {
+  int counter = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -57,23 +59,66 @@ class _Task1State extends State<Task1> {
                     ),
                   ),
                   Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.all(24),
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Icon(
-                        Icons.add,
-                      ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xffE7E7E7),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          if (counter > 0) {
+                            counter--;
+                          }
+                        });
+                      },
+                      icon: Icon(Icons.remove),
                     ),
                   ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: Icon(
-                      Icons.remove,
+                  Text(
+                    '$counter',
+                    style: TextStyle(
+                      fontSize: 20,
+                      backgroundColor: Color(0xffE7E7E7),
+                      height: 2.5,
                     ),
-                  )
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xffE7E7E7),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          counter++;
+                        });
+                      },
+                      icon: Icon(Icons.add),
+                    ),
+                  ),
                 ],
-              )
+              ),
+              Spacer(),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                margin: EdgeInsets.only(bottom: 225),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Image.asset('imgs/Ellipse 1.png'),
+                    Image.asset('imgs/Ellipse 2.png'),
+                    Image.asset('imgs/Ellipse 3.png'),
+                  ],
+                ),
+              ),
+              Text(
+                'Drawing Room Wooden Sofa Set is solid wooden sofa set which you can contrast the cushion of any color. The good sight caused ue to the furniture help us relax for a longer time.',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16,
+                ),
+              ),
             ],
           ),
         ),
