@@ -46,6 +46,33 @@ class _Task1State extends State<Task1> {
                   'imgs/sofa.png',
                   height: 300,
                 ),
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Room Sofa',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.all(24),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Icon(
+                        Icons.add,
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Icon(
+                      Icons.remove,
+                    ),
+                  )
+                ],
               )
             ],
           ),
