@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -99,10 +101,10 @@ class _Task1State extends State<Task1> {
                   ),
                 ],
               ),
-              Spacer(),
+              SizedBox(height: 8),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                margin: EdgeInsets.only(bottom: 225),
+                padding: EdgeInsets.only(left: 10, right: 10),
+                margin: EdgeInsets.only(bottom: 25),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -112,13 +114,48 @@ class _Task1State extends State<Task1> {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 16,
+              ),
               Text(
                 'Drawing Room Wooden Sofa Set is solid wooden sofa set which you can contrast the cushion of any color. The good sight caused ue to the furniture help us relax for a longer time.',
                 style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 16,
-                ),
+                    fontSize: 16,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
               ),
+              SizedBox(
+                height: 16,
+              ),
+              Row(
+                children: [
+                  Text(
+                    '¥2500',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Spacer(),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      // backgroundColor: Color(0xFF819BBB),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                      textStyle: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    child: Text(
+                      'Add to cart',
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                  )
+                ],
+              )
             ],
           ),
         ),
@@ -126,131 +163,3 @@ class _Task1State extends State<Task1> {
     );
   }
 }
-// import 'package:flutter/material.dart';
-
-// void main() {
-//   runApp(test());
-// }
-
-// class test extends StatefulWidget {
-//   const test({super.key});
-
-//   @override
-//   State<test> createState() => _testState();
-// }
-
-// class _testState extends State<test> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text('Sofa Shop'),
-//           backgroundColor: Colors.white,
-//           leading: IconButton(
-//             icon: Icon(Icons.arrow_back, color: Colors.black),
-//             onPressed: () {},
-//           ),
-//           actions: [
-//             IconButton(
-//               icon: Icon(Icons.favorite_border, color: Colors.black),
-//               onPressed: () {},
-//             ),
-//           ],
-//         ),
-//         body: Padding(
-//           padding: const EdgeInsets.all(16.0),
-//           child: Column(
-//             crossAxisAlignment: CrossAxisAlignment.start,
-//             children: [
-//               Center(
-//                 child: Image.asset(
-//                   'imgs/sofa.png',
-//                   height: 200,
-//                 ),
-//               ),
-//               SizedBox(height: 16),
-//               Text(
-//                 'Room Sofa',
-//                 style: TextStyle(
-//                   fontSize: 24,
-//                   fontWeight: FontWeight.bold,
-//                 ),
-//               ),
-//               SizedBox(height: 8),
-//               Row(
-//                 children: [
-//                   CircleAvatar(
-//                     backgroundColor: Colors.blue,
-//                     radius: 8,
-//                   ),
-//                   SizedBox(width: 8),
-//                   CircleAvatar(
-//                     backgroundColor: Colors.brown,
-//                     radius: 8,
-//                   ),
-//                   SizedBox(width: 8),
-//                   CircleAvatar(
-//                     backgroundColor: Colors.black,
-//                     radius: 8,
-//                   ),
-//                 ],
-//               ),
-//               SizedBox(height: 16),
-//               Text(
-//                 'Drawing Room Wooden Sofa Set is solid wooden sofa set which you can contrast the cushion of any color. The good sight caused use to the furniture help us relax for a longer time.',
-//                 style: TextStyle(
-//                   fontSize: 16,
-//                   color: Colors.grey[700],
-//                 ),
-//               ),
-//               SizedBox(height: 16),
-//               Row(
-//                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                 children: [
-//                   Row(
-//                     children: [
-//                       IconButton(
-//                         icon: Icon(Icons.remove),
-//                         onPressed: () {},
-//                       ),
-//                       Text(
-//                         '1',
-//                         style: TextStyle(fontSize: 18),
-//                       ),
-//                       IconButton(
-//                         icon: Icon(Icons.add),
-//                         onPressed: () {},
-//                       ),
-//                     ],
-//                   ),
-//                 ],
-//               ),
-//               Text(
-//                 '¥2500',
-//                 style: TextStyle(
-//                   fontSize: 24,
-//                   fontWeight: FontWeight.bold,
-//                 ),
-//               ),
-//               SizedBox(height: 16),
-//               Center(
-//                 child: ElevatedButton(
-//                   onPressed: () {},
-//                   child: Text('Add to cart'),
-//                   style: ElevatedButton.styleFrom(
-//                     iconColor: Colors.blue,
-//                     padding: EdgeInsets.symmetric(horizontal: 80, vertical: 16),
-//                     textStyle: TextStyle(
-//                       fontSize: 18,
-//                     ),
-//                   ),
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
