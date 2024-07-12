@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Task1 extends StatefulWidget {
-  const Task1({super.key});
+class Details extends StatefulWidget {
+  const Details({super.key});
 
   @override
-  State<Task1> createState() => _Task1State();
+  State<Details> createState() => _Task1State();
 }
 
-class _Task1State extends State<Task1> {
+class _Task1State extends State<Details> {
   int counter = 0;
 
   @override
@@ -24,7 +24,7 @@ class _Task1State extends State<Task1> {
           Icons.arrow_back,
           color: Colors.black,
         ),
-        actions: const [
+        actions: [
           Icon(
             Icons.favorite_border,
             color: Colors.black,
